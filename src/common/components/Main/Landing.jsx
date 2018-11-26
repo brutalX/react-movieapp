@@ -1,11 +1,16 @@
 import React from "react";
+import NavBar from "../Navigation/NavBar";
+import Wrapper from "../Elements/Wrapper";
+import ImageWrapper from "../Elements/ImageWrapper";
 import Content from "./Content";
-import ImageCard from "../Elements/ImageCard";
 import styled from "styled-components";
 import PopularMovies from "./PopularMovies";
-const Main = () => {
+const Landing = () => {
   return (
     <React.Fragment>
+      <NavBar />
+      <Wrapper />
+      <ImageWrapper />
       <Content>
         <PopularMovies />
       </Content>
@@ -13,4 +18,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Landing;

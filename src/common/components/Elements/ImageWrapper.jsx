@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import cinema_chairs from "../../../img/cinema_chairs.jpg";
 const ImageLayout = styled.div`
-  display: table;
   background-image: url(${cinema_chairs});
   width: 100%;
   height: 75vh;

@@ -1,18 +1,18 @@
 import React, { Component } from "react";
-import NavBar from "./common/components/Navigation/NavBar";
-import Wrapper from "./common/components/Elements/Wrapper";
-import ImageWrapper from "./common/components/Elements/ImageWrapper";
-import Main from "./common/components/Main";
-import PopularMovies from "./common/components/Main/PopularMovies";
+import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import SearchDetail from "./common/components/Search/SearchDetail";
+import Landing from "./common/components/Main/Landing";
+import FourOwFour from "./common/components/404/FourOwFour";
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
-        <NavBar />
-        <Wrapper />
-        <ImageWrapper />
-        <Main />
-      </React.Fragment>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route path="/searchdetail" component={SearchDetail} />
+          <Route component={FourOwFour} />
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
